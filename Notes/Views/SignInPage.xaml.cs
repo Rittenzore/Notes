@@ -33,7 +33,6 @@ namespace Notes.Views
             {
                 App.Current.MainPage = new AppShell();
                 App.User = myquery;
-                Preferences.Set("userId", myquery.Id);
             }
             else
             {

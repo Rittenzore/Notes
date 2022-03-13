@@ -13,7 +13,15 @@ namespace Notes.Views
 
         private void LogoutButton_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new SignInPage();
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                var result = await DisplayAlert("Logout", "Are you sure you want to logout?", "Yes", "No");
+                if (result)
+                {
+                    App.Current.MainPage = new SignInPage();
+                    App.User = null;
+                }
+            });
         }
     }
 }

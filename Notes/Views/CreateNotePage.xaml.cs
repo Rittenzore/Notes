@@ -8,8 +8,6 @@ namespace Notes.Views
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public partial class CreateNotePage : ContentPage
     {
-        int userId = Convert.ToInt32(Preferences.Get("userId", 1));
-
         public string ItemId
         {
             set
@@ -44,7 +42,7 @@ namespace Notes.Views
 
             note.Date = DateTime.UtcNow;
 
-            note.UserId = userId;
+            note.UserId = App.User.Id;
 
             if (!string.IsNullOrWhiteSpace(note.Text))
             {

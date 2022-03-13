@@ -15,6 +15,6 @@
                 Clicked="LogoutButton_Clicked"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="End"
-                WidthRequest="250"/>
+                WidthRequest="200"/>
     </Grid>
 </ContentPage>
