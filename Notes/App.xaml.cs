@@ -4,12 +4,14 @@ using Notes.Data;
 using System.IO;
 
 using Notes.Views;
+using Xamarin.Essentials;
 
 namespace Notes
 {
     public partial class App : Application
     {
         static NoteDB notesDB;
+        static UserDB userDB;
 
         public static NoteDB NotesDB
         {
@@ -18,12 +20,22 @@ namespace Notes
                 if (notesDB == null)
                 {
                     notesDB = new NoteDB(
-                        Path.Combine(
-                            Environment.GetFolderPath(
-                                Environment.SpecialFolder.MyDocuments),
-                                "NoteDB.db"));
+                        Path.Combine(FileSystem.AppDataDirectory, "NoteDB.db"));
                 }
                 return notesDB;
+            }
+        }
+
+        public static UserDB UserDB
+        {
+            get
+            {
+                if (userDB == null)
+                {
+                    userDB = new UserDB(
+                        Path.Combine(FileSystem.AppDataDirectory, "UserDB.db"));
+                }
+                return userDB;
             }
         }
 
@@ -31,9 +43,8 @@ namespace Notes
         {
             InitializeComponent();
 
-            //MainPage = new NavigationPage(new SignInPage());
-            MainPage = new AppShell();
-
+            MainPage = new NavigationPage(new SignInPage());
+            Routing.RegisterRoute(nameof(SignUpPage), typeof(SignUpPage));
         }
 
         protected override void OnStart()

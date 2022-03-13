@@ -1,6 +1,6 @@
 ﻿using System;
 using Notes.Models;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Notes.Views
@@ -8,6 +8,8 @@ namespace Notes.Views
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public partial class CreateNotePage : ContentPage
     {
+        int userId = Convert.ToInt32(Preferences.Get("userId", 1));
+
         public string ItemId
         {
             set
@@ -41,6 +43,8 @@ namespace Notes.Views
             Note note = (Note)BindingContext;
 
             note.Date = DateTime.UtcNow;
+
+            note.UserId = userId;
 
             if (!string.IsNullOrWhiteSpace(note.Text))
             {

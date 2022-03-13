@@ -16,25 +16,28 @@ namespace Notes.Views
 
         private void SignUpButton_Clicked(object sender, EventArgs e)
         {
-            var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
+            var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDB.db");
             var db = new SQLiteConnection(dbPath);
-            db.CreateTable<User>();
+            if (db == null)
+            {
+                db.CreateTable<User>();
+            }
 
             var item = new User()
             {
-                username = EntryUsername.Text,
-                password = EntryPassword.Text,
-                name = EntryName.Text,
-                email = EntryEmail.Text
+                Username = EntryUsername.Text,
+                Password = EntryPassword.Text,
+                Name = EntryName.Text,
+                Email = EntryEmail.Text
             };
 
             db.Insert(item);
             Device.BeginInvokeOnMainThread(async () =>
             {
 
-                var result = await this.DisplayAlert("Congratz", "Successfully signed up!", "Okay", "Cancel");
+                var result = await this.DisplayAlert("Congratz", "Successfully signed up!", null, "Ok");
 
-                if (result)
+                if (!result)
                     App.Current.MainPage = new SignInPage();
             });
         }

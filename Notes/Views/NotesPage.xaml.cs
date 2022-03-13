@@ -7,6 +7,7 @@ namespace Notes.Views
 {
     public partial class NotesPage : ContentPage
     {
+        int userId = Convert.ToInt32(Preferences.Get("userId", 1));
 
         public NotesPage()
         {
@@ -15,7 +16,7 @@ namespace Notes.Views
 
         protected override async void OnAppearing()
         {
-            listView.ItemsSource = await App.NotesDB.GetNotesAsync();
+            listView.ItemsSource = await App.NotesDB.GetNotesAsync(userId);
 
             base.OnAppearing();
         }
@@ -31,7 +32,7 @@ namespace Notes.Views
             {
                 Note note = (Note)e.SelectedItem;
                 await Shell.Current.GoToAsync(
-                    $"{nameof(CreateNotePage)}?{nameof(CreateNotePage.ItemId)}={note.ID.ToString()}");
+                    $"{nameof(CreateNotePage)}?{nameof(CreateNotePage.ItemId)}={note.Id.ToString()}");
             }
         }
     }

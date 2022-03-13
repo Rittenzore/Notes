@@ -13,6 +13,8 @@ namespace Notes.Views
         public SignInPage()
         {
             InitializeComponent();
+
+            Routing.RegisterRoute(nameof(SignUpPage), typeof(SignUpPage));
         }
 
         private async void SignUpButton_Clicked(object sender, EventArgs e)
@@ -25,26 +27,22 @@ namespace Notes.Views
             var dppath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDB.db");
             var db = new SQLiteConnection(dppath);
 
-            var myquery = db.Table<User>().Where(u => u.username.Equals(EntryUsername.Text) && u.password.Equals(EntryPassword.Text)).FirstOrDefault();
+            var myquery = db.Table<User>().Where(u => u.Username.Equals(EntryUsername.Text) && u.Password.Equals(EntryPassword.Text)).FirstOrDefault();
 
             if (myquery != null)
             {
-                App.Current.MainPage = new NavigationPage(new AppShell());
-                Preferences.Set("noteID", myquery.ID);
+                App.Current.MainPage = new AppShell();
+                Preferences.Set("userId", myquery.Id);
             }
             else
             {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
 
-                    var result = await this.DisplayAlert("Error", "Failed to sign in. Your username or password is incorrect", "Okay", "Cancel");
+                    var result = await DisplayAlert("Error", "Failed to sign in. Your username or password is incorrect", null, "Ok");
 
-                    if (result)
-                        App.Current.MainPage = new NavigationPage(new SignInPage());
-                    else
-                    {
-                        App.Current.MainPage = new NavigationPage(new SignInPage());
-                    }
+                    EntryUsername.Text = "";
+                    EntryPassword.Text = "";
                 });
             }
         }

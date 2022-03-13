@@ -1,41 +1,46 @@
 ﻿<Properties StartupConfiguration="{F1626617-1C4F-49C0-82CB-F1F80D68B720}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Notes/Views/SignUpPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Notes/Data/NoteDB.cs">
     <Files>
-      <File FileName="Notes/Views/NotesPage.xaml.cs" Line="25" Column="10" />
+      <File FileName="Notes/Views/NotesPage.xaml.cs" Line="32" Column="14" />
       <File FileName="Notes/App.xaml" Line="1" Column="1" />
-      <File FileName="Notes/AppShell.xaml" Line="18" Column="30" />
-      <File FileName="Notes/AppShell.xaml.cs" Line="16" Column="1" />
+      <File FileName="Notes/AppShell.xaml" Line="12" Column="50" />
+      <File FileName="Notes/AppShell.xaml.cs" Line="17" Column="1" />
       <File FileName="Notes/Views/CreateNotePage.xaml" />
-      <File FileName="Notes/Views/CreateNotePage.xaml.cs" Line="12" Column="10" />
-      <File FileName="Notes/App.xaml.cs" Line="34" Column="59" />
-      <File FileName="Notes/Data/NotesDB.cs" Line="1" Column="1" />
-      <File FileName="Notes/Models/Note.cs" Line="9" Column="9" />
-      <File FileName="Notes/Views/ProfilePage.xaml.cs" Line="15" Column="17" />
-      <File FileName="Notes/Views/NotesPage.xaml" Line="14" Column="47" />
-      <File FileName="Notes.iOS/Main.cs" Line="18" Column="10" />
-      <File FileName="Notes/Models/User.cs" Line="16" Column="2" />
+      <File FileName="Notes/Views/CreateNotePage.xaml.cs" Line="32" Column="55" />
+      <File FileName="Notes/App.xaml.cs" Line="25" Column="14" />
+      <File FileName="Notes/Data/NotesDB.cs" Line="13" Column="18" />
+      <File FileName="Notes/Models/Note.cs" Line="17" Column="1" />
+      <File FileName="Notes/Views/ProfilePage.xaml.cs" Line="2" Column="1" />
+      <File FileName="Notes/Views/NotesPage.xaml" Line="5" Column="26" />
+      <File FileName="Notes.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="Notes/Models/User.cs" Line="9" Column="34" />
       <File FileName="Notes/Views/SignUpPage.xaml" Line="45" Column="62" />
-      <File FileName="Notes/Views/SignUpPage.xaml.cs" Line="17" Column="16" />
+      <File FileName="Notes/Views/SignUpPage.xaml.cs" Line="34" Column="13" />
       <File FileName="Notes/Views/SignInPage.xaml" Line="18" Column="104" />
-      <File FileName="Notes/Views/SignInPage.xaml.cs" Line="26" Column="1" />
+      <File FileName="Notes/Views/SignInPage.xaml.cs" Line="35" Column="17" />
       <File FileName="Notes/Views/ProfilePage.xaml" Line="7" Column="76" />
-      <File FileName="Notes/Models/Notes.cs" Line="8" Column="36" />
+      <File FileName="Notes/Data/UserDB.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Notes" expanded="True">
             <Node name="Notes" expanded="True">
+              <Node name="Data" expanded="True">
+                <Node name="NoteDB.cs" selected="True" />
+              </Node>
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
+                <Node name="CreateNotePage.xaml" expanded="True" />
+                <Node name="NotesPage.xaml" expanded="True" />
+                <Node name="ProfilePage.xaml" expanded="True" />
                 <Node name="SignInPage.xaml" expanded="True" />
-                <Node name="SignUpPage.xaml" expanded="True">
-                  <Node name="SignUpPage.xaml.cs" selected="True" />
-                </Node>
+                <Node name="SignUpPage.xaml" expanded="True" />
               </Node>
               <Node name="App.xaml" expanded="True" />
               <Node name="AppShell.xaml" expanded="True" />
             </Node>
+            <Node name="Notes.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -48,7 +53,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/rittenzore/Developer/Xamarin/Notes/Notes/Views/SignInPage.xaml.cs" relfile="Notes/Views/SignInPage.xaml.cs" line="33" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

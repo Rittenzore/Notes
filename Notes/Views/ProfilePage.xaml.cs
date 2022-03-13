@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 using Xamarin.Forms;
 
@@ -12,9 +11,9 @@ namespace Notes.Views
             InitializeComponent();
         }
 
-        private async void LogoutButton_Clicked(object sender, EventArgs e)
+        private void LogoutButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SignInPage());
+            App.Current.MainPage = new SignInPage();
         }
     }
 }
