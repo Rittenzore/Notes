@@ -1,41 +1,53 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Notes.Data;
 using System.IO;
-
 using Notes.Views;
 using Xamarin.Essentials;
+using Notes.Models;
 
 namespace Notes
 {
     public partial class App : Application
     {
-        static NoteDB notesDB;
-        static UserDB userDB;
+        static NoteService notesDB;
+        static UserService userDB;
+        static User user;
 
-        public static NoteDB NotesDB
+        public static NoteService NotesDB
         {
             get
             {
                 if (notesDB == null)
                 {
-                    notesDB = new NoteDB(
+                    notesDB = new NoteService(
                         Path.Combine(FileSystem.AppDataDirectory, "NoteDB.db"));
                 }
                 return notesDB;
             }
         }
 
-        public static UserDB UserDB
+        public static UserService UserDB
         {
             get
             {
                 if (userDB == null)
                 {
-                    userDB = new UserDB(
+                    userDB = new UserService(
                         Path.Combine(FileSystem.AppDataDirectory, "UserDB.db"));
                 }
                 return userDB;
+            }
+        }
+
+        public static User User
+        {
+            get
+            {
+                return user;
+            }
+            set
+            {
+                user = value;
             }
         }
 

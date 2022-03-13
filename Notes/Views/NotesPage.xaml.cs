@@ -1,14 +1,11 @@
 ﻿using System;
 using Xamarin.Forms;
 using Notes.Models;
-using Xamarin.Essentials;
 
 namespace Notes.Views
 {
     public partial class NotesPage : ContentPage
     {
-        int userId = Convert.ToInt32(Preferences.Get("userId", 1));
-
         public NotesPage()
         {
             InitializeComponent();
@@ -16,7 +13,7 @@ namespace Notes.Views
 
         protected override async void OnAppearing()
         {
-            listView.ItemsSource = await App.NotesDB.GetNotesAsync(userId);
+            listView.ItemsSource = await App.NotesDB.GetNotesAsync(App.User.Id);
 
             base.OnAppearing();
         }

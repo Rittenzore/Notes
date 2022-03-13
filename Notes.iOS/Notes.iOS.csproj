@@ -138,6 +138,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\profileIcon.png" />
-    <BundleResource Include="Resources\icons8-заметка-100 %281%29.png" />
+    <BundleResource Include="Resources\noteIcon.png" />
+    <BundleResource Include="Resources\plusIcon.png" />
+    <BundleResource Include="Resources\Subtract.png" />
   </ItemGroup>
 </Project>

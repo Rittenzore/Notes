@@ -1,5 +1,4 @@
 ﻿using System;
-
 using Xamarin.Forms;
 
 namespace Notes.Views
@@ -9,6 +8,7 @@ namespace Notes.Views
         public ProfilePage()
         {
             InitializeComponent();
+            nameLabel.Text = $"Hello, {App.User.Name} 👋";
         }
 
         private void LogoutButton_Clicked(object sender, EventArgs e)

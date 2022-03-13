@@ -32,6 +32,7 @@ namespace Notes.Views
             if (myquery != null)
             {
                 App.Current.MainPage = new AppShell();
+                App.User = myquery;
                 Preferences.Set("userId", myquery.Id);
             }
             else
@@ -41,7 +42,6 @@ namespace Notes.Views
 
                     var result = await DisplayAlert("Error", "Failed to sign in. Your username or password is incorrect", null, "Ok");
 
-                    EntryUsername.Text = "";
                     EntryPassword.Text = "";
                 });
             }

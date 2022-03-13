@@ -3,7 +3,18 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Notes.Views.ProfilePage">
-    <ContentPage.Content>
-        <Button Text="Logout" TextColor="Red" Clicked="LogoutButton_Clicked"/>
-    </ContentPage.Content>
+    <Grid>
+        <Label x:Name="nameLabel"
+               VerticalOptions="Start"
+               HorizontalOptions="Center"/>
+
+        <Button Text="Logout"
+                Margin="24, 16, 24, 16"
+                TextColor="White"
+                BackgroundColor="#ff3b30"
+                Clicked="LogoutButton_Clicked"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="End"
+                WidthRequest="250"/>
+    </Grid>
 </ContentPage>

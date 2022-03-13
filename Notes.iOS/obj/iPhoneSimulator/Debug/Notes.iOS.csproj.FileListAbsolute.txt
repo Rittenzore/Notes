@@ -53,6 +53,11 @@
 /Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/bin/iPhoneSimulator/Debug/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/bin/iPhoneSimulator/Debug/Notes.dll
 /Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/bin/iPhoneSimulator/Debug/Notes.pdb
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/Notes.iOS.csproj.AssemblyReference.cache
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/Notes.iOS.csproj.CoreCompileInputs.cache
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/Notes.iOS.csproj.CopyComplete
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/Notes.iOS.exe
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/Notes.iOS.pdb
 /Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/actool/_PartialAppManifest.items
 /Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/actool/_BundleResourceWithLogicalName.items
 /Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/actool/_ProcessedImageAssetsPath.items
@@ -63,11 +68,8 @@
 /Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/coremlc/_ProcessedCoreMLModelsPath.items
 /Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/_ProcessedBundleResourcesPath.items
 /Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/_ProcessedContentPath.items
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/optimized/
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/Notes.iOS.csproj.AssemblyReference.cache
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/Notes.iOS.csproj.CoreCompileInputs.cache
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/Notes.iOS.csproj.CopyComplete
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/Notes.iOS.exe
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/Notes.iOS.pdb
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/optimized/noteIcon.png
 /Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/optimized/profileIcon.png
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/optimized/noteIcon.png
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/optimized/plusIcon.png
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/optimized/
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/optimized/Subtract.png
