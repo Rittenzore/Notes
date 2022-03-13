@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Notes.AppShell"
+    xmlns:views="clr-namespace:Notes.Views">
+
+    <TabBar>
+        <ShellContent
+            Title="Notes"
+            Icon="noteIcon.png"
+            ContentTemplate="{DataTemplate views:NotesPage}">
+
+        </ShellContent>
+
+        <ShellContent
+            Title="Profile"
+            Icon="profileIcon.png"
+            ContentTemplate="{DataTemplate views:ProfilePage}">
+
+        </ShellContent>
+    </TabBar>
+</Shell>
