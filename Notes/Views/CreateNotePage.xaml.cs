@@ -20,6 +20,15 @@ namespace Notes.Views
         {
             InitializeComponent();
 
+            if (string.IsNullOrWhiteSpace(EditorText.Text))
+            {
+                DeleteButton.IsVisible = false;
+            }
+            else
+            {
+                DeleteButton.IsVisible = true;
+            }
+
             BindingContext = new Note();
         }
 

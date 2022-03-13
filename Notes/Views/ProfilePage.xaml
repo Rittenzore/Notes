@@ -3,18 +3,59 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Notes.Views.ProfilePage">
-    <Grid>
-        <Label x:Name="nameLabel"
-               VerticalOptions="Start"
-               HorizontalOptions="Center"/>
 
-        <Button Text="Logout"
+    <StackLayout VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand">
+        <StackLayout VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand">
+            <!-- top controls -->
+            <Grid Margin="24, 24, 24, 24">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <!-- email field -->
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Text="Email"
+                       VerticalOptions="Center"/>
+                <Entry Grid.Row="0"
+                       Grid.Column="1"
+                       Text="email@mail.ru"
+                       x:Name="EntryEmail"
+                       WidthRequest="280"
+                       IsEnabled="False"/>
+                <!-- name field -->
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Text="Name"
+                       VerticalOptions="Center"/>
+                <Entry Grid.Row="1"
+                       Grid.Column="1"
+                       Text="test name"
+                       x:Name="EntryName"
+                       WidthRequest="280"
+                       IsEnabled="False"/>
+            </Grid>
+        </StackLayout>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <!-- middle controls -->
+            
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="End">
+            <!-- bottom controls -->
+            <Button Text="Logout"
                 Margin="24, 16, 24, 16"
                 TextColor="White"
                 BackgroundColor="#ff3b30"
                 Clicked="LogoutButton_Clicked"
                 HorizontalOptions="CenterAndExpand"
-                VerticalOptions="End"
                 WidthRequest="200"/>
-    </Grid>
+        </StackLayout>
+    </StackLayout>
 </ContentPage>

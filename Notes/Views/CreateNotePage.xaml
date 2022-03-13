@@ -12,14 +12,16 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Margin="20">
-                <Editor Placeholder="Note text"
+                <Editor x:Name="EditorText"
+                        Placeholder="Note text"
                         Text="{Binding Text}"
                         HeightRequest="100"/>
 
-                <Button Grid.Column="1"
-                            Text="Delete"
-                            TextColor="#ff3b30"
-                            Clicked="OnDeleteButton_Clicked"/>
+                <Button x:Name="DeleteButton"
+                        Grid.Column="1"
+                        Text="Delete"
+                        TextColor="#ff3b30"
+                        Clicked="OnDeleteButton_Clicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

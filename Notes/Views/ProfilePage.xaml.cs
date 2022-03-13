@@ -8,7 +8,10 @@ namespace Notes.Views
         public ProfilePage()
         {
             InitializeComponent();
-            nameLabel.Text = $"Hello, {App.User.Name} 👋";
+
+            Title = $"Hello, {App.User.Name} 👋";
+            EntryEmail.Text = App.User.Email;
+            EntryName.Text = App.User.Name;
         }
 
         private void LogoutButton_Clicked(object sender, EventArgs e)
