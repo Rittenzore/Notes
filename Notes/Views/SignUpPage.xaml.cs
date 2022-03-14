@@ -13,15 +13,8 @@ namespace Notes.Views
             InitializeComponent();
         }
 
-        private void SignUpButton_Clicked(object sender, EventArgs e)
+        private async void SignUpButton_Clicked(object sender, EventArgs e)
         {
-            var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDB.db");
-            var db = new SQLiteConnection(dbPath);
-            if (db == null)
-            {
-                db.CreateTable<User>();
-            }
-
             var item = new User()
             {
                 Username = EntryUsername.Text,
@@ -30,14 +23,15 @@ namespace Notes.Views
                 Email = EntryEmail.Text
             };
 
-            db.Insert(item);
+            var signUp = await App.UserDB.SignUp(item);
+
             Device.BeginInvokeOnMainThread(async () =>
             {
 
-                var result = await this.DisplayAlert("Congratz", "Successfully signed up!", null, "Ok");
+                var result = await DisplayAlert("Congratz", "Successfully signed up!", null, "Ok");
 
                 if (!result)
-                    App.Current.MainPage = new SignInPage();
+                    App.Current.MainPage = new NavigationPage(new SignInPage());
             });
         }
     }

@@ -23,6 +23,7 @@ namespace Notes.Views
                 {
                     App.Current.MainPage = new SignInPage();
                     App.User = null;
+                    App.Current.Properties["userId"] = null;
                 }
             });
         }

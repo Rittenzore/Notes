@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using Notes.Models;
 using SQLite;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Notes.Views
@@ -22,17 +21,20 @@ namespace Notes.Views
             await Navigation.PushAsync(new SignUpPage());
         }
 
-        private void SignInButton_Clicked(object sender, EventArgs e)
+        private async void SignInButton_Clicked(object sender, EventArgs e)
         {
-            var dppath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDB.db");
-            var db = new SQLiteConnection(dppath);
+            //var dppath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDB.db");
+            //var db = new SQLiteConnection(dppath);
+            var myquery = await App.UserDB.SignIn(EntryUsername.Text, EntryPassword.Text);
 
-            var myquery = db.Table<User>().Where(u => u.Username.Equals(EntryUsername.Text) && u.Password.Equals(EntryPassword.Text)).FirstOrDefault();
+            //var myquery = a. Table<User>().Where(u => u.Username.Equals(EntryUsername.Text) && u.Password.Equals(EntryPassword.Text)).FirstOrDefault();
 
             if (myquery != null)
             {
                 App.Current.MainPage = new AppShell();
                 App.User = myquery;
+                App.Current.Properties["userId"] = myquery.Id;
+                await App.Current.SavePropertiesAsync();
             }
             else
             {

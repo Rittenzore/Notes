@@ -4,6 +4,7 @@ using System.IO;
 using Notes.Views;
 using Xamarin.Essentials;
 using Notes.Models;
+using System;
 
 namespace Notes
 {
@@ -20,7 +21,7 @@ namespace Notes
                 if (notesDB == null)
                 {
                     notesDB = new NoteService(
-                        Path.Combine(FileSystem.AppDataDirectory, "NoteDB.db"));
+                        Path.Combine(FileSystem.AppDataDirectory, "Note.db"));
                 }
                 return notesDB;
             }
@@ -33,7 +34,7 @@ namespace Notes
                 if (userDB == null)
                 {
                     userDB = new UserService(
-                        Path.Combine(FileSystem.AppDataDirectory, "UserDB.db"));
+                        Path.Combine(FileSystem.AppDataDirectory, "User.db"));
                 }
                 return userDB;
             }
@@ -56,11 +57,23 @@ namespace Notes
             InitializeComponent();
 
             MainPage = new NavigationPage(new SignInPage());
-            Routing.RegisterRoute(nameof(SignUpPage), typeof(SignUpPage));
         }
 
-        protected override void OnStart()
+        protected async override void OnStart()
         {
+            if (App.Current.Properties.ContainsKey("userId"))
+            {
+                var userId = Convert.ToInt32(App.Current.Properties["userId"]);
+                User user = await App.UserDB.GetUserAsync(userId);
+                App.User = user;
+                Console.Write(user);
+                MainPage = new AppShell();
+            }
+            else
+            {
+                MainPage = new NavigationPage(new SignInPage());
+                Routing.RegisterRoute(nameof(SignUpPage), typeof(SignUpPage));
+            }
         }
 
         protected override void OnSleep()

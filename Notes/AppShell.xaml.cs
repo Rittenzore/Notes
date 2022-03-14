@@ -1,5 +1,4 @@
-﻿using Notes.Models;
-using Notes.Views;
+﻿using Notes.Views;
 using Xamarin.Forms;
 
 namespace Notes
