@@ -58,18 +58,18 @@
 /Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/Notes.iOS.csproj.CopyComplete
 /Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/Notes.iOS.exe
 /Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/Notes.iOS.pdb
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/actool/_PartialAppManifest.items
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/actool/_BundleResourceWithLogicalName.items
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/actool/_ProcessedImageAssetsPath.items
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/ibtool/_BundleResourceWithLogicalName.items
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/ibtool/_ProcessedInterfaceDefinitionsPath.items
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/coremlc/_PartialAppManifest.items
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/coremlc/_BundleResourceWithLogicalName.items
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/coremlc/_ProcessedCoreMLModelsPath.items
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/_ProcessedBundleResourcesPath.items
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/_ProcessedContentPath.items
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/optimized/profileIcon.png
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/optimized/noteIcon.png
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/optimized/plusIcon.png
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/optimized/
-/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.2/optimized/Subtract.png
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/actool/_PartialAppManifest.items
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/actool/_BundleResourceWithLogicalName.items
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/actool/_ProcessedImageAssetsPath.items
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/ibtool/_BundleResourceWithLogicalName.items
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/ibtool/_ProcessedInterfaceDefinitionsPath.items
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/coremlc/_PartialAppManifest.items
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/coremlc/_BundleResourceWithLogicalName.items
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/coremlc/_ProcessedCoreMLModelsPath.items
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/_ProcessedBundleResourcesPath.items
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/_ProcessedContentPath.items
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/profileIcon.png
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/noteIcon.png
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/plusIcon.png
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/Subtract.png
+/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/

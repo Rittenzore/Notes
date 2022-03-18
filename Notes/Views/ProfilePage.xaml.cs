@@ -21,7 +21,7 @@ namespace Notes.Views
                 var result = await DisplayAlert("Logout", "Are you sure you want to logout?", "Yes", "No");
                 if (result)
                 {
-                    App.Current.MainPage = new SignInPage();
+                    App.Current.MainPage = new NavigationPage(new SignInPage());
                     App.User = null;
                     App.Current.Properties["userId"] = null;
                 }
