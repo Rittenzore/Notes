@@ -5,6 +5,7 @@ using Notes.Views;
 using Xamarin.Essentials;
 using Notes.Models;
 using System;
+using Notes.Helpers;
 
 namespace Notes
 {
@@ -59,14 +60,16 @@ namespace Notes
             MainPage = new NavigationPage(new SignInPage());
         }
 
-        protected async override void OnStart()
+        protected override void OnStart()
         {
             if (App.Current.Properties.ContainsKey("userId"))
             {
                 var userId = Convert.ToInt32(App.Current.Properties["userId"]);
-                User user = await App.UserDB.GetUserAsync(userId);
+                User user = new User()
+                {
+                    Id = userId
+                };
                 App.User = user;
-                Console.Write(user);
                 MainPage = new AppShell();
             }
             else

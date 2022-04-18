@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZGGp1Sn60jh6wY0Dx9f0o6n7mDjV06RI+mP4gQt7eFMmzRoA836GekBXXxzOOQ237ZE7+ryCxCB2bjgF5Xk5PA==",
+  "dgSpecHash": "PQsH94HbALjGoTMvRY/UCmLZZkQ1napYhDWKu6X4IqsEIIEeu0rKSRNPUAIp+zgRJIST6WqtJX7RN7mljdTz/g==",
   "success": true,
   "projectFilePath": "/Users/rittenzore/Developer/Xamarin/Notes/Notes.iOS/Notes.iOS.csproj",
   "expectedPackageFiles": [
+    "/Users/rittenzore/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/Users/rittenzore/.nuget/packages/sqlite-net-pcl/1.8.116/sqlite-net-pcl.1.8.116.nupkg.sha512",
     "/Users/rittenzore/.nuget/packages/sqlitepclraw.bundle_green/2.0.4/sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
     "/Users/rittenzore/.nuget/packages/sqlitepclraw.core/2.0.4/sqlitepclraw.core.2.0.4.nupkg.sha512",

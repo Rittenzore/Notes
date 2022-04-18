@@ -1,8 +1,12 @@
 ﻿using System;
-using System.IO;
+using System.Collections.Generic;
 using Notes.Models;
-using SQLite;
 using Xamarin.Forms;
+using System.Net.Http;
+
+using Newtonsoft.Json;
+using Notes.Helpers;
+using Newtonsoft.Json.Linq;
 
 namespace Notes.Views
 {
@@ -15,24 +19,28 @@ namespace Notes.Views
 
         private async void SignUpButton_Clicked(object sender, EventArgs e)
         {
-            var item = new User()
+            string username = EntryUsername.Text;
+            string password = EntryPassword.Text;
+            string name = EntryName.Text;
+            string email = EntryEmail.Text;
+
+            List<KeyValuePair<string, string>> req = new List<KeyValuePair<string, string>>();
+            req.Add(new KeyValuePair<string, string>("username", username));
+            req.Add(new KeyValuePair<string, string>("password", password));
+            req.Add(new KeyValuePair<string, string>("name", name));
+            req.Add(new KeyValuePair<string, string>("email", email));
+
+            Response res = await HttpRequest.MakePostRequest("/sign-up", req);
+            JToken data = res.ResponseData;
+
+            if (res.IsSuccess)
             {
-                Username = EntryUsername.Text,
-                Password = EntryPassword.Text,
-                Name = EntryName.Text,
-                Email = EntryEmail.Text
-            };
-
-            var signUp = await App.UserDB.SignUp(item);
-
-            Device.BeginInvokeOnMainThread(async () =>
+                App.Current.MainPage = new NavigationPage(new SignInPage());
+            }
+            else
             {
-
-                var result = await DisplayAlert("Congratz", "Successfully signed up!", null, "Ok");
-
-                if (!result)
-                    App.Current.MainPage = new NavigationPage(new SignInPage());
-            });
+                await DisplayAlert("Error", res.ResponseData.Value<string>(), "Ok");
+            }
         }
     }
 }
