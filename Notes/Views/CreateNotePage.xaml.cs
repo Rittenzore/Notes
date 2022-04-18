@@ -96,9 +96,26 @@ namespace Notes.Views
         {
             Note note = (Note)BindingContext;
 
-            await App.NotesDB.DeleteNoteAsync(note);
+            List<KeyValuePair<string, string>> req = new List<KeyValuePair<string, string>>();
+            req.Add(new KeyValuePair<string, string>("id", note.Id.ToString()));
+            Response res = await HttpRequest.MakePostRequest("remove-note", req);
 
-            await Shell.Current.GoToAsync("..");
+            JToken data = res.ResponseData;
+
+            if (res.IsSuccess)
+            {
+                await Shell.Current.GoToAsync("..");
+            }
+            else
+            {
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    string error_message = data["error"].ToString();
+
+                    var result = await DisplayAlert("Error", error_message, null, "Ok");
+                });
+
+            }
         }
     }
 }
