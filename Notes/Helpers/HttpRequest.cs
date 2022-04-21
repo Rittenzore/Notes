@@ -53,6 +53,11 @@ namespace Notes.Helpers
             };
         }
 
+        internal static Response MakeGetRequest()
+        {
+            throw new NotImplementedException();
+        }
+
         public static async Task<Response> MakeGetRequest(string url_extension)
         {
             HttpClient client = new HttpClient();

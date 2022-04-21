@@ -1,27 +1,27 @@
 ﻿<Properties StartupConfiguration="{F1626617-1C4F-49C0-82CB-F1F80D68B720}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Notes/Views/CreateNotePage.xaml.cs">
     <Files>
-      <File FileName="Notes/Views/NotesPage.xaml.cs" Line="23" Column="10" />
+      <File FileName="Notes/Views/NotesPage.xaml.cs" Line="74" Column="21" />
       <File FileName="Notes/App.xaml" />
-      <File FileName="Notes/AppShell.xaml" Line="1" Column="1" />
-      <File FileName="Notes/AppShell.xaml.cs" Line="1" Column="1" />
+      <File FileName="Notes/AppShell.xaml" />
+      <File FileName="Notes/AppShell.xaml.cs" />
       <File FileName="Notes/Views/CreateNotePage.xaml" />
-      <File FileName="Notes/Views/CreateNotePage.xaml.cs" Line="51" Column="21" />
-      <File FileName="Notes/App.xaml.cs" Line="74" Column="14" />
+      <File FileName="Notes/Views/CreateNotePage.xaml.cs" Line="113" Column="69" />
+      <File FileName="Notes/App.xaml.cs" />
       <File FileName="Notes/Models/Note.cs" />
       <File FileName="Notes/Views/ProfilePage.xaml.cs" />
-      <File FileName="Notes/Views/NotesPage.xaml" Line="1" Column="1" />
-      <File FileName="Notes.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="Notes/Views/NotesPage.xaml" />
+      <File FileName="Notes.iOS/Main.cs" />
       <File FileName="Notes/Models/User.cs" />
       <File FileName="Notes/Views/SignUpPage.xaml" />
       <File FileName="Notes/Views/SignUpPage.xaml.cs" />
-      <File FileName="Notes/Views/SignInPage.xaml" Line="1" Column="1" />
-      <File FileName="Notes/Views/SignInPage.xaml.cs" Line="28" Column="13" />
+      <File FileName="Notes/Views/SignInPage.xaml" />
+      <File FileName="Notes/Views/SignInPage.xaml.cs" />
       <File FileName="Notes/Views/ProfilePage.xaml" />
       <File FileName="../../../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/iOS/Xamarin.Shared.targets" />
-      <File FileName="Notes/Data/NoteService.cs" Line="19" Column="39" />
-      <File FileName="Notes/Data/UserService.cs" Line="18" Column="1" />
-      <File FileName="Notes/Helpers/HttpRequest.cs" Line="60" Column="59" />
+      <File FileName="Notes/Data/NoteService.cs" />
+      <File FileName="Notes/Data/UserService.cs" />
+      <File FileName="Notes/Helpers/HttpRequest.cs" />
       <File FileName="Notes/Models/Response.cs" />
     </Files>
     <Pads>
@@ -33,7 +33,9 @@
               <Node name="Helpers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="CreateNotePage.xaml" expanded="True" />
+                <Node name="CreateNotePage.xaml" expanded="True">
+                  <Node name="CreateNotePage.xaml.cs" selected="True" />
+                </Node>
                 <Node name="NotesPage.xaml" expanded="True" />
                 <Node name="ProfilePage.xaml" expanded="True" />
                 <Node name="SignInPage.xaml" expanded="True" />
@@ -48,7 +50,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Notes.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B1A33288-81D8-4805-8848-68FFAAD6C225" />
+  <MonoDevelop.Ide.ItemProperties.Notes.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.452D7BE0-CEEC-40B3-85D2-13C34254D053" Xamarin.HotReload.DebuggerTimeoutException.Notes.iOS.HideInfoBar="True" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

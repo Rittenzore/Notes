@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
+using Notes.Helpers;
+using Notes.Models;
 using Xamarin.Forms;
 
 namespace Notes.Views
@@ -8,10 +12,47 @@ namespace Notes.Views
         public ProfilePage()
         {
             InitializeComponent();
+        }
 
-            Title = $"Hello, {App.User.Name} 👋";
-            EntryEmail.Text = App.User.Email;
-            EntryName.Text = App.User.Name;
+        protected override async void OnAppearing()
+        {
+            User user = await GetUserFromDatabase();
+
+            Title = $"Hello, {user.Name} 👋";
+            EntryEmail.Text = user.Email;
+            EntryName.Text = user.Name;
+
+            base.OnAppearing();
+        }
+
+
+        private async Task<User> GetUserFromDatabase()
+        {
+            Response res = await HttpRequest.MakeGetRequest("user/" + App.User.Id);
+
+            if (res.IsSuccess)
+            {
+                JObject data = JObject.Parse(res.ResponseData.ToString());
+
+                int id = data["id"].Value<int>();
+                string username = data["username"].Value<string>();
+                string name = data["name"].Value<string>();
+                string email = data["email"].Value<string>();
+
+                User user = new User()
+                {
+                    Id = id,
+                    Username = username,
+                    Name = name,
+                    Email = email
+                };
+
+                return user;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         private void LogoutButton_Clicked(object sender, EventArgs e)

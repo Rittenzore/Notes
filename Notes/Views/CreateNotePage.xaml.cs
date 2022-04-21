@@ -20,6 +20,8 @@ namespace Notes.Views
             }
         }
 
+        public int? noteId = null;
+
         public Task<Response> HttpResponse { get; private set; }
 
         public CreateNotePage()
@@ -53,6 +55,9 @@ namespace Notes.Views
                         Date = dateTime
                     };
 
+                    noteId = new_note.Id;
+
+
                     BindingContext = new_note;
                 }
             }
@@ -61,35 +66,64 @@ namespace Notes.Views
 
         private async void OnSaveButton_Clicked(object sender, EventArgs e)
         {
-            Note note = (Note)BindingContext;
-            note.Date = DateTime.UtcNow;
-            note.UserId = App.User.Id;
-            
-            string text = note.Text;
-            DateTime date = note.Date;
-
-            List<KeyValuePair<string, string>> req = new List<KeyValuePair<string, string>>();
-            req.Add(new KeyValuePair<string, string>("user_id", note.UserId.ToString()));
-            req.Add(new KeyValuePair<string, string>("text", text));
-
-            Response res = await HttpRequest.MakePostRequest("/create-note", req);
-            JToken data = res.ResponseData;
-
-            if (res.IsSuccess)
+            Console.WriteLine("!!!!!!" + noteId);
+            if (noteId == null)
             {
-                await Shell.Current.GoToAsync("..");
+                Note note = (Note)BindingContext;
+                note.Date = DateTime.UtcNow;
+                note.UserId = App.User.Id;
+
+                string text = note.Text;
+                DateTime date = note.Date;
+
+                List<KeyValuePair<string, string>> req = new List<KeyValuePair<string, string>>();
+                req.Add(new KeyValuePair<string, string>("user_id", note.UserId.ToString()));
+                req.Add(new KeyValuePair<string, string>("text", text));
+
+                Response res = await HttpRequest.MakePostRequest("/create-note", req);
+                JToken data = res.ResponseData;
+
+                if (res.IsSuccess)
+                {
+                    await Shell.Current.GoToAsync("..");
+                }
+                else
+                {
+                    Device.BeginInvokeOnMainThread(async () =>
+                    {
+                        string error_message = data["error"].ToString();
+
+                        var result = await DisplayAlert("Error", error_message, null, "Ok");
+                    });
+
+                }
             }
             else
             {
-                Device.BeginInvokeOnMainThread(async () =>
+                Note note = (Note)BindingContext;
+                string text = note.Text;
+
+                List<KeyValuePair<string, string>> req = new List<KeyValuePair<string, string>>();
+                req.Add(new KeyValuePair<string, string>("text", text));
+
+                Response res = await HttpRequest.MakePostRequest("/edit-note/" + noteId, req);
+                JToken data = res.ResponseData;
+
+                if (res.IsSuccess)
                 {
-                    string error_message = data["error"].ToString();
+                    await Shell.Current.GoToAsync("..");
+                }
+                else
+                {
+                    Device.BeginInvokeOnMainThread(async () =>
+                    {
+                        string error_message = data.ToString();
 
-                    var result = await DisplayAlert("Error", error_message, null, "Ok");
-                });
+                        var result = await DisplayAlert("Error", error_message, null, "Ok");
+                    });
 
+                }
             }
-
         }
 
         private async void OnDeleteButton_Clicked(object sender, EventArgs e)
